@@ -4,7 +4,13 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            IDataAccess myDatabase = DataAccessFactory.GetDataAccess();
+
+            myDatabase.LoadData();
+
+            myDatabase.SaveData();
+
+
         }
     }
 }
